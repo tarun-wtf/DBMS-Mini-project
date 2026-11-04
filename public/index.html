@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshKart | Quick groceries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#shop"><span class="brand-mark">F</span><span>FreshKart</span></a>
+    <nav><a href="#shop">Shop</a><a href="account.html">Account</a><a id="authLink" href="auth.html">Log in</a></nav>
+    <button class="cart-button" id="cartButton">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="shop">
+      <div>
+        <p class="eyebrow">Fresh essentials, fast</p>
+        <h1>Your everyday grocery run, made simple.</h1>
+        <p class="hero-copy">Pick your favourites, add them to your basket, and get your order moving.</p>
+      </div>
+      <div class="hero-note"><strong>Today’s promise</strong><span>Quality groceries at honest prices.</span></div>
+    </section>
+
+    <section class="shop-layout">
+      <div class="catalog">
+        <div class="section-heading"><div><p class="eyebrow">Browse the shelves</p><h2>What are you looking for?</h2></div><div class="catalog-tools"><label class="search-field"><span>Search</span><input id="productSearch" type="search" placeholder="Milk, snacks, fruit..." autocomplete="off"></label><span id="productCount" class="muted"></span></div></div>
+        <div id="categories" class="category-tabs"></div>
+        <div id="products" class="product-grid"><p class="loading">Loading products...</p></div>
+      </div>
+      <aside class="cart-panel" id="cartPanel">
+        <div class="cart-heading"><h2>Your basket</h2><span id="cartTotal">₹0.00</span></div>
+        <div id="cartItems" class="cart-items"><p class="empty-state">Your basket is waiting for something good.</p></div>
+        <div class="cart-summary"><div><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div><small>Delivery is free for this demo.</small><button class="primary-button" id="checkoutButton" disabled>Checkout</button></div>
+      </aside>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
